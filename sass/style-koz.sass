@@ -1,0 +1,250 @@
+$orange-color: rgb(238,140,12)
+
+*, *::after, *::before
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html
+    scroll-behavior: smooth
+
+body
+    position: relative
+    font-family: 'Montserrat', sans-serif
+    background-color: #333
+
+.wrapper
+    width: 80%
+    margin: 0 auto
+    background-color: #f1f1f1
+
+    h2
+        padding-top: 20px
+        text-transform: uppercase
+        text-align: center
+
+.underline
+    margin: 0 auto
+    width: 100px
+    height: 4px
+    background-color: $orange-color
+
+.scroll-fix::before
+    content: ''
+    display: block
+    height: 88.5px
+    margin-top: -88.5px
+
+//Nawigacja
+
+nav
+    text-transform: uppercase
+
+    a
+        color: #333
+        transition: color .5
+
+    a:hover
+        color: $orange-color
+
+    img
+        width: 250px
+
+    .active
+        color: rgb(238, 140, 12)
+
+//header
+
+header
+    color: #ffffff
+
+    h1
+        text-transform: uppercase
+        // animation: bounceInUp 1s
+        // animation-delay: .5s
+
+    .hero-img
+        position: relative
+        height: 100vh
+        background-image: url('/img/kozienicebudynek.jpg')
+        background-position: center
+        background-size: cover
+        background-attachment: fixed
+        z-index: 0
+
+    .hero-shadow
+        position: absolute
+        background-color: rgba(0,0,0, .6)
+        width: 100%
+        height: 100%
+        z-index: -1
+
+    .hero-text
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        height: 100%
+        color: white
+
+        span
+            color: $orange-color
+
+    a
+        text-transform: uppercase
+
+    .fas
+        position: absolute
+        bottom: 20%
+        left: 50%
+        transform: translateX(-50%)
+        font-size: 30px
+        padding: 30px 0
+        color: white
+        animation: bounce 1.5s infinite
+
+//MAIN
+
+//aboutus
+
+#aboutus
+
+    .wrapper:first-child
+        padding-bottom: 30px
+
+    .wrapper
+        font-size: 20px
+
+        p
+            text-align: center
+            margin-top: 10px
+
+        .row p
+
+            font-size: 15px
+
+            i
+                font-size: 30px
+
+        li
+            margin-left: 20px
+            font-size: 15px
+            margin-top: 5px
+
+    .carousel-item //opinie
+        position: relative
+        height: 60vh
+
+        img
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+        h3
+            position: absolute
+            left: 10%
+            text-transform: uppercase
+
+        p
+            position: absolute
+            top: 30%
+            left: 10%
+            right: 10%
+
+        .author
+            position: absolute
+            bottom: 10%
+            right: 10%
+
+    .carousel-caption
+        position: absolute
+        left: 0
+        right: 0
+        top: 10%
+        bottom: 10%
+        background-color: rgba(0, 0, 0, .6)
+
+//forcustomer
+
+#forcustomers
+
+    a
+        text-decoration: none
+        color: black
+
+//offer
+
+#offer
+
+    .accordion-body
+        position: relative
+
+        span
+            text-transform: uppercase
+            font-size: 1.5rem
+            padding-bottom: 20px
+
+        .image
+            position: absolute
+            right: 0
+            bottom: 0
+            background-position: center
+            background-size: cover
+
+    #collapseOne .image
+        width: 40%
+        height: 70%
+        background-image: url('/img/rehszpitalna.jpg')
+
+    #collapseTwo .image
+        width: 40%
+        height: 60%
+        background-image: url('/img/fizykoterapia.jpg')
+
+    #collapseThree .image
+        width: 40%
+        height: 70%
+        background-image: url('/img/kinezyterapia.jpg')
+
+    #collapseFour .image
+        width: 40%
+        height: 80%
+        background-image: url('/img/masaz.jpg')
+
+    #collapseSix .image
+        top: 10%
+        bottom: 10%
+        width: 35%
+        height: 80%
+        background-image: url('/img/domowa.jpg')
+
+    #collapseSeven .image
+        width: 40%
+        height: 70%
+        background-image: url('/img/rehdzieci.jpg')
+
+//gallery
+
+#gallery .carousel
+    padding-top: 30px
+
+    .carousel-inner
+        height: 80vh
+
+#work
+
+    h4
+        text-align: center
+        margin-top: 30px
+        text-transform: uppercase
+
+    p
+
+        margin: 20px
+
+        span:first-child
+            color: $orange-color
+
+        span:last-child
+            font-style: italic
